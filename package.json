@@ -1,6 +1,6 @@
 {
   "name": "spirit-error",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Easily Return HTTP Errors from Spirit",
   "main": "source/index.js",
   "repository": "https://github.com/dodekeract/spirit-error",
