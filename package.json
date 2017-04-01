@@ -6,6 +6,9 @@
   "repository": "https://github.com/dodekeract/spirit-error",
   "author": "Florian Wendelborn <dodekeract@users.noreply.github.com>",
   "license": "MIT",
+  "scripts": {
+    "postpublish": "git tag $(node -e \"console.log(require('./package.json').version)\") && git push --tags"
+  },
   "devDependencies": {
     "coveralls": "^2.13.0",
     "mocha": "^3.2.0"
