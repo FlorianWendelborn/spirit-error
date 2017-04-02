@@ -1,4 +1,4 @@
-function error (status, message) {
+function error (type, status, message) {
 	if (type === 'json') json(status, message)
 	if (type === 'text') text(status, message)
 	if (type === 'html') html(status, message)
