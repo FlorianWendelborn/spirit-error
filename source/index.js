@@ -1,7 +1,6 @@
 function error (type, status, message) {
-	if (type === 'json') json(status, message)
-	if (type === 'text') text(status, message)
-	if (type === 'html') html(status, message)
+	if (type === 'text') return text(status, message)
+	if (type === 'html') return html(status, message)
 	if (type === 'dynamic') return function (headers) {
 		var accept = headers['accept'].split(';')[0]
 		var _json = accept.indexOf('json')
@@ -12,6 +11,7 @@ function error (type, status, message) {
 		if (_text !== -1 && _text <= _json && _text <= _html) return text(status, message)
 		return json(status, message)
 	}
+	return json(status, message)
 }
 
 function json (status, message) {
