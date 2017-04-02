@@ -45,6 +45,7 @@ function html (status, message) {
 }
 
 module.exports = function (options) {
+	if (!options) options = {}
 	var type = options.type || 'json'
 	return {
 		badRequest: error(type, 400, 'Bad Request'),
