@@ -10,7 +10,7 @@
     "postpublish": "git tag $(node -e \"console.log(require('./package.json').version)\") && git push --tags"
   },
   "devDependencies": {
-    "coveralls": "^2.13.0",
+    "coveralls": "^3.0.3",
     "mocha": "^6.1.4"
   }
 }
